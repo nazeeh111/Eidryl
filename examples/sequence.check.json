@@ -1,0 +1,342 @@
+{
+  "schema": "eidryl-check/1",
+  "passed": true,
+  "model_sha256": "1b9bbd6285531a56c43e8fa02ac74043771ab0b0d5e83cccafbdbee9844bafe0",
+  "requested_histories": 1,
+  "completed_histories": 1,
+  "transitions": 6,
+  "mismatches": 0,
+  "charged_operations": 33,
+  "refusal": null,
+  "records": [
+    {
+      "request": {
+        "model": "native-sequence",
+        "constructor": [
+          [
+            "one",
+            "two",
+            "three"
+          ],
+          4
+        ],
+        "actions": [
+          [
+            "rotate",
+            [
+              -10007
+            ]
+          ],
+          [
+            "append",
+            [
+              "four"
+            ]
+          ],
+          [
+            "extend",
+            [
+              [
+                "new",
+                "\ud83e\udded"
+              ]
+            ]
+          ],
+          [
+            "reverse",
+            []
+          ],
+          [
+            "pop",
+            []
+          ],
+          [
+            "popleft",
+            []
+          ]
+        ]
+      },
+      "native": {
+        "schema": "eidryl-observation/1",
+        "fields": [
+          "iteration",
+          "maxlen"
+        ],
+        "initial": [
+          [
+            "one",
+            "two",
+            "three"
+          ],
+          4
+        ],
+        "trace": [
+          {
+            "action": "rotate",
+            "args": [
+              -10007
+            ],
+            "accepted": true,
+            "value": null,
+            "error": null,
+            "before": [
+              [
+                "one",
+                "two",
+                "three"
+              ],
+              4
+            ],
+            "state": [
+              [
+                "three",
+                "one",
+                "two"
+              ],
+              4
+            ]
+          },
+          {
+            "action": "append",
+            "args": [
+              "four"
+            ],
+            "accepted": true,
+            "value": null,
+            "error": null,
+            "before": [
+              [
+                "three",
+                "one",
+                "two"
+              ],
+              4
+            ],
+            "state": [
+              [
+                "three",
+                "one",
+                "two",
+                "four"
+              ],
+              4
+            ]
+          },
+          {
+            "action": "extend",
+            "args": [
+              [
+                "new",
+                "\ud83e\udded"
+              ]
+            ],
+            "accepted": true,
+            "value": null,
+            "error": null,
+            "before": [
+              [
+                "three",
+                "one",
+                "two",
+                "four"
+              ],
+              4
+            ],
+            "state": [
+              [
+                "two",
+                "four",
+                "new",
+                "\ud83e\udded"
+              ],
+              4
+            ]
+          },
+          {
+            "action": "reverse",
+            "args": [],
+            "accepted": true,
+            "value": null,
+            "error": null,
+            "before": [
+              [
+                "two",
+                "four",
+                "new",
+                "\ud83e\udded"
+              ],
+              4
+            ],
+            "state": [
+              [
+                "\ud83e\udded",
+                "new",
+                "four",
+                "two"
+              ],
+              4
+            ]
+          },
+          {
+            "action": "pop",
+            "args": [],
+            "accepted": true,
+            "value": "two",
+            "error": null,
+            "before": [
+              [
+                "\ud83e\udded",
+                "new",
+                "four",
+                "two"
+              ],
+              4
+            ],
+            "state": [
+              [
+                "\ud83e\udded",
+                "new",
+                "four"
+              ],
+              4
+            ]
+          },
+          {
+            "action": "popleft",
+            "args": [],
+            "accepted": true,
+            "value": "\ud83e\udded",
+            "error": null,
+            "before": [
+              [
+                "\ud83e\udded",
+                "new",
+                "four"
+              ],
+              4
+            ],
+            "state": [
+              [
+                "new",
+                "four"
+              ],
+              4
+            ]
+          }
+        ],
+        "charged_operations": 33,
+        "operation_counts": {
+          "factory": 1,
+          "observation": 26,
+          "action": 6
+        }
+      },
+      "portable": {
+        "ok": true,
+        "initial": [
+          [
+            "one",
+            "two",
+            "three"
+          ],
+          4
+        ],
+        "initial_mode": 0,
+        "trace": [
+          {
+            "accepted": true,
+            "value": null,
+            "state": [
+              [
+                "three",
+                "one",
+                "two"
+              ],
+              4
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": null,
+            "state": [
+              [
+                "three",
+                "one",
+                "two",
+                "four"
+              ],
+              4
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": null,
+            "state": [
+              [
+                "two",
+                "four",
+                "new",
+                "\ud83e\udded"
+              ],
+              4
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": null,
+            "state": [
+              [
+                "\ud83e\udded",
+                "new",
+                "four",
+                "two"
+              ],
+              4
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": "two",
+            "state": [
+              [
+                "\ud83e\udded",
+                "new",
+                "four"
+              ],
+              4
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": "\ud83e\udded",
+            "state": [
+              [
+                "new",
+                "four"
+              ],
+              4
+            ],
+            "before_mode": 0,
+            "mode": 0
+          }
+        ],
+        "final_mode": 0
+      },
+      "comparison": {
+        "transitions": 6,
+        "mismatches": []
+      }
+    }
+  ],
+  "scope": "Recorded native comparisons on these histories. No universal equivalence, exception-message parity or future oracle proof."
+}

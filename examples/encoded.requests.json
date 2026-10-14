@@ -1,0 +1,136 @@
+[
+  {
+    "model": "native-encoded",
+    "constructor": [],
+    "actions": [
+      [
+        "write",
+        [
+          "hello\ud83d\ude42"
+        ]
+      ],
+      [
+        "textSeek",
+        [
+          0
+        ]
+      ],
+      [
+        "rawSeek",
+        [
+          1
+        ]
+      ],
+      [
+        "write",
+        [
+          "\u03b2"
+        ]
+      ],
+      [
+        "bytes",
+        []
+      ]
+    ]
+  },
+  {
+    "model": "native-encoded",
+    "constructor": [],
+    "actions": [
+      [
+        "write",
+        [
+          "history"
+        ]
+      ],
+      [
+        "truncate",
+        [
+          0
+        ]
+      ],
+      [
+        "rawSeek",
+        [
+          0
+        ]
+      ],
+      [
+        "write",
+        [
+          "B"
+        ]
+      ],
+      [
+        "bytes",
+        []
+      ]
+    ]
+  },
+  {
+    "model": "native-encoded",
+    "constructor": [],
+    "actions": [
+      [
+        "write",
+        [
+          "First life"
+        ]
+      ],
+      [
+        "truncate",
+        [
+          0
+        ]
+      ],
+      [
+        "rawSeek",
+        [
+          0
+        ]
+      ],
+      [
+        "bytes",
+        []
+      ],
+      [
+        "write",
+        [
+          "B"
+        ]
+      ],
+      [
+        "textSeek",
+        [
+          0
+        ]
+      ],
+      [
+        "truncate",
+        [
+          0
+        ]
+      ],
+      [
+        "rawSeek",
+        [
+          0
+        ]
+      ],
+      [
+        "bytes",
+        []
+      ],
+      [
+        "write",
+        [
+          "B"
+        ]
+      ],
+      [
+        "bytes",
+        []
+      ]
+    ]
+  }
+]

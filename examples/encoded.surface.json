@@ -1,0 +1,49 @@
+{
+  "schema": "eidryl-surface/1",
+  "id": "native-encoded",
+  "constructor_types": [],
+  "constructor_samples": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "actions": {
+    "write": {
+      "path": "write",
+      "types": [
+        "str"
+      ]
+    },
+    "rawSeek": {
+      "path": "buffer.seek",
+      "types": [
+        "int"
+      ]
+    },
+    "truncate": {
+      "path": "buffer.truncate",
+      "types": [
+        "int"
+      ]
+    },
+    "textSeek": {
+      "path": "seek",
+      "types": [
+        "int"
+      ]
+    },
+    "bytes": {
+      "path": "buffer.getvalue",
+      "types": []
+    },
+    "position": {
+      "path": "tell",
+      "types": []
+    }
+  }
+}

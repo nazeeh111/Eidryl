@@ -1,0 +1,974 @@
+{
+  "schema": "eidryl-check/1",
+  "passed": true,
+  "model_sha256": "e1f9ebfcff89ccabebef468917cb3e9bfe1b2e327372729cf9f3758c64d05b65",
+  "requested_histories": 3,
+  "completed_histories": 3,
+  "transitions": 21,
+  "mismatches": 0,
+  "charged_operations": 117,
+  "refusal": null,
+  "records": [
+    {
+      "request": {
+        "model": "native-encoded",
+        "constructor": [],
+        "actions": [
+          [
+            "write",
+            [
+              "hello\ud83d\ude42"
+            ]
+          ],
+          [
+            "textSeek",
+            [
+              0
+            ]
+          ],
+          [
+            "rawSeek",
+            [
+              1
+            ]
+          ],
+          [
+            "write",
+            [
+              "\u03b2"
+            ]
+          ],
+          [
+            "bytes",
+            []
+          ]
+        ]
+      },
+      "native": {
+        "schema": "eidryl-observation/1",
+        "fields": [
+          "buffer.getvalue()",
+          "buffer.tell()"
+        ],
+        "initial": [
+          {
+            "bytes": ""
+          },
+          0
+        ],
+        "trace": [
+          {
+            "action": "write",
+            "args": [
+              "hello\ud83d\ude42"
+            ],
+            "accepted": true,
+            "value": 6,
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": "//5oAGUAbABsAG8APdhC3g=="
+              },
+              16
+            ]
+          },
+          {
+            "action": "textSeek",
+            "args": [
+              0
+            ],
+            "accepted": true,
+            "value": 0,
+            "error": null,
+            "before": [
+              {
+                "bytes": "//5oAGUAbABsAG8APdhC3g=="
+              },
+              16
+            ],
+            "state": [
+              {
+                "bytes": "//5oAGUAbABsAG8APdhC3g=="
+              },
+              0
+            ]
+          },
+          {
+            "action": "rawSeek",
+            "args": [
+              1
+            ],
+            "accepted": true,
+            "value": 1,
+            "error": null,
+            "before": [
+              {
+                "bytes": "//5oAGUAbABsAG8APdhC3g=="
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": "//5oAGUAbABsAG8APdhC3g=="
+              },
+              1
+            ]
+          },
+          {
+            "action": "write",
+            "args": [
+              "\u03b2"
+            ],
+            "accepted": true,
+            "value": 1,
+            "error": null,
+            "before": [
+              {
+                "bytes": "//5oAGUAbABsAG8APdhC3g=="
+              },
+              1
+            ],
+            "state": [
+              {
+                "bytes": "///+sgMAbABsAG8APdhC3g=="
+              },
+              5
+            ]
+          },
+          {
+            "action": "bytes",
+            "args": [],
+            "accepted": true,
+            "value": {
+              "bytes": "///+sgMAbABsAG8APdhC3g=="
+            },
+            "error": null,
+            "before": [
+              {
+                "bytes": "///+sgMAbABsAG8APdhC3g=="
+              },
+              5
+            ],
+            "state": [
+              {
+                "bytes": "///+sgMAbABsAG8APdhC3g=="
+              },
+              5
+            ]
+          }
+        ],
+        "charged_operations": 29,
+        "operation_counts": {
+          "factory": 1,
+          "observation": 22,
+          "action": 5,
+          "cleanup": 1
+        }
+      },
+      "portable": {
+        "ok": true,
+        "initial": [
+          {
+            "bytes": ""
+          },
+          0
+        ],
+        "initial_mode": 1,
+        "trace": [
+          {
+            "accepted": true,
+            "value": 6,
+            "state": [
+              {
+                "bytes": "//5oAGUAbABsAG8APdhC3g=="
+              },
+              16
+            ],
+            "before_mode": 1,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 0,
+            "state": [
+              {
+                "bytes": "//5oAGUAbABsAG8APdhC3g=="
+              },
+              0
+            ],
+            "before_mode": 0,
+            "mode": 1
+          },
+          {
+            "accepted": true,
+            "value": 1,
+            "state": [
+              {
+                "bytes": "//5oAGUAbABsAG8APdhC3g=="
+              },
+              1
+            ],
+            "before_mode": 1,
+            "mode": 1
+          },
+          {
+            "accepted": true,
+            "value": 1,
+            "state": [
+              {
+                "bytes": "///+sgMAbABsAG8APdhC3g=="
+              },
+              5
+            ],
+            "before_mode": 1,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": {
+              "bytes": "///+sgMAbABsAG8APdhC3g=="
+            },
+            "state": [
+              {
+                "bytes": "///+sgMAbABsAG8APdhC3g=="
+              },
+              5
+            ],
+            "before_mode": 0,
+            "mode": 0
+          }
+        ],
+        "final_mode": 0
+      },
+      "comparison": {
+        "transitions": 5,
+        "mismatches": []
+      }
+    },
+    {
+      "request": {
+        "model": "native-encoded",
+        "constructor": [],
+        "actions": [
+          [
+            "write",
+            [
+              "history"
+            ]
+          ],
+          [
+            "truncate",
+            [
+              0
+            ]
+          ],
+          [
+            "rawSeek",
+            [
+              0
+            ]
+          ],
+          [
+            "write",
+            [
+              "B"
+            ]
+          ],
+          [
+            "bytes",
+            []
+          ]
+        ]
+      },
+      "native": {
+        "schema": "eidryl-observation/1",
+        "fields": [
+          "buffer.getvalue()",
+          "buffer.tell()"
+        ],
+        "initial": [
+          {
+            "bytes": ""
+          },
+          0
+        ],
+        "trace": [
+          {
+            "action": "write",
+            "args": [
+              "history"
+            ],
+            "accepted": true,
+            "value": 7,
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": "//5oAGkAcwB0AG8AcgB5AA=="
+              },
+              16
+            ]
+          },
+          {
+            "action": "truncate",
+            "args": [
+              0
+            ],
+            "accepted": true,
+            "value": 0,
+            "error": null,
+            "before": [
+              {
+                "bytes": "//5oAGkAcwB0AG8AcgB5AA=="
+              },
+              16
+            ],
+            "state": [
+              {
+                "bytes": ""
+              },
+              16
+            ]
+          },
+          {
+            "action": "rawSeek",
+            "args": [
+              0
+            ],
+            "accepted": true,
+            "value": 0,
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              16
+            ],
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ]
+          },
+          {
+            "action": "write",
+            "args": [
+              "B"
+            ],
+            "accepted": true,
+            "value": 1,
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": "QgA="
+              },
+              2
+            ]
+          },
+          {
+            "action": "bytes",
+            "args": [],
+            "accepted": true,
+            "value": {
+              "bytes": "QgA="
+            },
+            "error": null,
+            "before": [
+              {
+                "bytes": "QgA="
+              },
+              2
+            ],
+            "state": [
+              {
+                "bytes": "QgA="
+              },
+              2
+            ]
+          }
+        ],
+        "charged_operations": 29,
+        "operation_counts": {
+          "factory": 1,
+          "observation": 22,
+          "action": 5,
+          "cleanup": 1
+        }
+      },
+      "portable": {
+        "ok": true,
+        "initial": [
+          {
+            "bytes": ""
+          },
+          0
+        ],
+        "initial_mode": 1,
+        "trace": [
+          {
+            "accepted": true,
+            "value": 7,
+            "state": [
+              {
+                "bytes": "//5oAGkAcwB0AG8AcgB5AA=="
+              },
+              16
+            ],
+            "before_mode": 1,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 0,
+            "state": [
+              {
+                "bytes": ""
+              },
+              16
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 0,
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 1,
+            "state": [
+              {
+                "bytes": "QgA="
+              },
+              2
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": {
+              "bytes": "QgA="
+            },
+            "state": [
+              {
+                "bytes": "QgA="
+              },
+              2
+            ],
+            "before_mode": 0,
+            "mode": 0
+          }
+        ],
+        "final_mode": 0
+      },
+      "comparison": {
+        "transitions": 5,
+        "mismatches": []
+      }
+    },
+    {
+      "request": {
+        "model": "native-encoded",
+        "constructor": [],
+        "actions": [
+          [
+            "write",
+            [
+              "First life"
+            ]
+          ],
+          [
+            "truncate",
+            [
+              0
+            ]
+          ],
+          [
+            "rawSeek",
+            [
+              0
+            ]
+          ],
+          [
+            "bytes",
+            []
+          ],
+          [
+            "write",
+            [
+              "B"
+            ]
+          ],
+          [
+            "textSeek",
+            [
+              0
+            ]
+          ],
+          [
+            "truncate",
+            [
+              0
+            ]
+          ],
+          [
+            "rawSeek",
+            [
+              0
+            ]
+          ],
+          [
+            "bytes",
+            []
+          ],
+          [
+            "write",
+            [
+              "B"
+            ]
+          ],
+          [
+            "bytes",
+            []
+          ]
+        ]
+      },
+      "native": {
+        "schema": "eidryl-observation/1",
+        "fields": [
+          "buffer.getvalue()",
+          "buffer.tell()"
+        ],
+        "initial": [
+          {
+            "bytes": ""
+          },
+          0
+        ],
+        "trace": [
+          {
+            "action": "write",
+            "args": [
+              "First life"
+            ],
+            "accepted": true,
+            "value": 10,
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": "//5GAGkAcgBzAHQAIABsAGkAZgBlAA=="
+              },
+              22
+            ]
+          },
+          {
+            "action": "truncate",
+            "args": [
+              0
+            ],
+            "accepted": true,
+            "value": 0,
+            "error": null,
+            "before": [
+              {
+                "bytes": "//5GAGkAcgBzAHQAIABsAGkAZgBlAA=="
+              },
+              22
+            ],
+            "state": [
+              {
+                "bytes": ""
+              },
+              22
+            ]
+          },
+          {
+            "action": "rawSeek",
+            "args": [
+              0
+            ],
+            "accepted": true,
+            "value": 0,
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              22
+            ],
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ]
+          },
+          {
+            "action": "bytes",
+            "args": [],
+            "accepted": true,
+            "value": {
+              "bytes": ""
+            },
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ]
+          },
+          {
+            "action": "write",
+            "args": [
+              "B"
+            ],
+            "accepted": true,
+            "value": 1,
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": "QgA="
+              },
+              2
+            ]
+          },
+          {
+            "action": "textSeek",
+            "args": [
+              0
+            ],
+            "accepted": true,
+            "value": 0,
+            "error": null,
+            "before": [
+              {
+                "bytes": "QgA="
+              },
+              2
+            ],
+            "state": [
+              {
+                "bytes": "QgA="
+              },
+              0
+            ]
+          },
+          {
+            "action": "truncate",
+            "args": [
+              0
+            ],
+            "accepted": true,
+            "value": 0,
+            "error": null,
+            "before": [
+              {
+                "bytes": "QgA="
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ]
+          },
+          {
+            "action": "rawSeek",
+            "args": [
+              0
+            ],
+            "accepted": true,
+            "value": 0,
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ]
+          },
+          {
+            "action": "bytes",
+            "args": [],
+            "accepted": true,
+            "value": {
+              "bytes": ""
+            },
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ]
+          },
+          {
+            "action": "write",
+            "args": [
+              "B"
+            ],
+            "accepted": true,
+            "value": 1,
+            "error": null,
+            "before": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "state": [
+              {
+                "bytes": "//5CAA=="
+              },
+              4
+            ]
+          },
+          {
+            "action": "bytes",
+            "args": [],
+            "accepted": true,
+            "value": {
+              "bytes": "//5CAA=="
+            },
+            "error": null,
+            "before": [
+              {
+                "bytes": "//5CAA=="
+              },
+              4
+            ],
+            "state": [
+              {
+                "bytes": "//5CAA=="
+              },
+              4
+            ]
+          }
+        ],
+        "charged_operations": 59,
+        "operation_counts": {
+          "factory": 1,
+          "observation": 46,
+          "action": 11,
+          "cleanup": 1
+        }
+      },
+      "portable": {
+        "ok": true,
+        "initial": [
+          {
+            "bytes": ""
+          },
+          0
+        ],
+        "initial_mode": 1,
+        "trace": [
+          {
+            "accepted": true,
+            "value": 10,
+            "state": [
+              {
+                "bytes": "//5GAGkAcgBzAHQAIABsAGkAZgBlAA=="
+              },
+              22
+            ],
+            "before_mode": 1,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 0,
+            "state": [
+              {
+                "bytes": ""
+              },
+              22
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 0,
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": {
+              "bytes": ""
+            },
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 1,
+            "state": [
+              {
+                "bytes": "QgA="
+              },
+              2
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 0,
+            "state": [
+              {
+                "bytes": "QgA="
+              },
+              0
+            ],
+            "before_mode": 0,
+            "mode": 1
+          },
+          {
+            "accepted": true,
+            "value": 0,
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "before_mode": 1,
+            "mode": 1
+          },
+          {
+            "accepted": true,
+            "value": 0,
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "before_mode": 1,
+            "mode": 1
+          },
+          {
+            "accepted": true,
+            "value": {
+              "bytes": ""
+            },
+            "state": [
+              {
+                "bytes": ""
+              },
+              0
+            ],
+            "before_mode": 1,
+            "mode": 1
+          },
+          {
+            "accepted": true,
+            "value": 1,
+            "state": [
+              {
+                "bytes": "//5CAA=="
+              },
+              4
+            ],
+            "before_mode": 1,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": {
+              "bytes": "//5CAA=="
+            },
+            "state": [
+              {
+                "bytes": "//5CAA=="
+              },
+              4
+            ],
+            "before_mode": 0,
+            "mode": 0
+          }
+        ],
+        "final_mode": 0
+      },
+      "comparison": {
+        "transitions": 11,
+        "mismatches": []
+      }
+    }
+  ],
+  "scope": "Recorded native comparisons on these histories. No universal equivalence, exception-message parity or future oracle proof."
+}

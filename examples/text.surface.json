@@ -1,0 +1,61 @@
+{
+  "schema": "eidryl-surface/1",
+  "id": "native-text",
+  "constructor_types": [
+    "str"
+  ],
+  "constructor_samples": [
+    [
+      ""
+    ],
+    [
+      "A"
+    ],
+    [
+      "alpha"
+    ],
+    [
+      "\u03b2eta"
+    ],
+    [
+      "\ud83d\ude42Z"
+    ],
+    [
+      "\u6f22\u5b57"
+    ],
+    [
+      "a\nb"
+    ],
+    [
+      "\u00e9\u0301"
+    ]
+  ],
+  "actions": {
+    "write": {
+      "path": "write",
+      "types": [
+        "str"
+      ]
+    },
+    "read": {
+      "path": "read",
+      "types": [
+        "int"
+      ]
+    },
+    "seek": {
+      "path": "seek",
+      "types": [
+        "int"
+      ]
+    },
+    "value": {
+      "path": "getvalue",
+      "types": []
+    },
+    "position": {
+      "path": "tell",
+      "types": []
+    }
+  }
+}

@@ -1,0 +1,46 @@
+name: Verify
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contracts:
+    name: ${{ matrix.os }} Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: '3.11'
+          - os: ubuntu-latest
+            python: '3.14'
+          - os: macos-latest
+            python: '3.14'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Native inference and failure contracts
+        env:
+          PYTHONPATH: src
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Portable interpreter and studio contracts
+        run: node --test tests/runtime.test.mjs tests/studio.test.mjs
+      - name: Build dependency-free wheel
+        run: |
+          python -m pip install setuptools==84.0.0
+          python -m pip wheel --no-deps --no-build-isolation . --wheel-dir dist
+      - name: Installed wheel outside checkout
+        run: |
+          python -m venv --without-pip /tmp/eidryl-installed
+          python -m pip --python /tmp/eidryl-installed/bin/python install --no-index --no-deps dist/*.whl
+          cd /tmp
+          /tmp/eidryl-installed/bin/python -I "$GITHUB_WORKSPACE/scripts/installed_journey.py" "$GITHUB_WORKSPACE"
