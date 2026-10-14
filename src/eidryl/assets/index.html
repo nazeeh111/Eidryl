@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore an inferred stateful API model. Edit inputs, predict transitions and inspect the learned rules without the original runtime.">
+  <title>Eidryl · Portable behavior lab</title>
+  <link rel="stylesheet" href="./studio.css">
+  <script type="module" src="./studio.mjs"></script>
+</head>
+<body>
+  <header class="masthead"><a class="wordmark" href="./">eidryl<span class="brand-mark" aria-hidden="true">↗</span></a><span class="eyebrow">Portable behavior lab</span><a href="./README.md" class="guide">Field guide ↗</a></header>
+  <main>
+    <section class="intro" aria-labelledby="headline">
+      <div><p class="eyebrow">Observe → infer → execute</p><h1 id="headline">What happens next<br>is <em>learned.</em></h1><p class="lede">Turn observed API behavior into an executable model. Change inputs and explore inferred state rules, including memory a public snapshot can miss.</p></div>
+      <div class="scope-note"><span class="live-dot" aria-hidden="true"></span><strong>Prediction, in your browser</strong><p id="memory-note">A public snapshot can miss hidden memory.</p><p>Native comparisons are separate recorded evidence, never live measurements.</p></div>
+    </section>
+    <section class="model-bar" aria-label="Loaded model"><div><span class="eyebrow">Model</span><h2 id="model-name">Loading model…</h2></div><dl class="metrics"><div><dt>Actions</dt><dd id="action-count">—</dd></div><div><dt>Observed fields</dt><dd id="field-count">—</dd></div><div><dt>Hidden modes</dt><dd id="mode-count">—</dd></div></dl><div class="file-actions"><input type="file" id="import-file" accept=".json,application/json" class="file-input"><label class="button secondary" for="import-file">Import model / session</label><button id="download-model" class="icon-button" type="button" disabled>Save model ↓</button><a class="icon-button portable-download" href="./portable.zip" download="eidryl-portable.zip" title="Unzip and serve its folder locally; see the field guide.">Download portable lab ZIP ↓</a></div></section>
+    <p id="status" class="status" role="status" aria-live="polite">Loading the portable session.</p>
+    <div class="workspace">
+      <section class="inputs panel" aria-labelledby="input-title"><div class="panel-heading"><div><p class="eyebrow">01 / Experiment</p><h2 id="input-title">Write a history</h2></div><span class="badge">Editable</span></div>
+        <label for="constructor">Constructor arguments <span>JSON array</span></label><textarea id="constructor" rows="3" spellcheck="false" placeholder='["hello"]'></textarea>
+        <label for="actions">Action history <span>JSON pairs: [name, arguments]</span></label><textarea id="actions" rows="10" spellcheck="false" placeholder='[["read", [2]], ["tell", []]]'></textarea>
+        <details class="action-builder"><summary>Add an action</summary><div class="builder-row"><label for="action-name">Declared action<select id="action-name"></select></label><label for="action-args">Arguments<input id="action-args" value="[]" spellcheck="false"></label><button id="append-action" class="secondary" type="button">Append +</button></div><p id="action-signature" class="muted">Choose an action to see its declared argument types.</p></details>
+        <div class="run-actions"><button id="run" class="primary" type="button" disabled>Predict this history <span aria-hidden="true">↗</span></button><button id="restore" class="secondary" type="button" disabled>Reset inputs</button></div><p class="input-note">A refused action keeps its previous state. Unsupported inputs are explicit; prediction does not establish native equivalence.</p>
+      </section>
+      <section class="exploration panel" aria-labelledby="explore-title"><div class="panel-heading"><div><p class="eyebrow">02 / Follow the behavior</p><h2 id="explore-title">Every transition, exposed</h2></div><button id="download-session" class="secondary" type="button" disabled>Save session ↓</button></div>
+        <div class="prediction-bar"><span id="prediction-label">Awaiting a prediction</span><span id="prediction-count" class="muted"></span></div>
+        <div class="trace-layout"><nav class="timeline" id="timeline" aria-label="Prediction steps"><p class="empty">Run a history to explore its transitions.</p></nav><div class="inspector"><div class="step-heading"><p id="step-caption" class="eyebrow">Selected step</p><h3 id="step-title">Start with a history</h3></div><div id="mode-strip" class="mode-strip" aria-label="Inferred hidden modes"></div><div id="step-result" class="step-result"></div><div id="state-fields" class="state-fields"></div><details id="rules-panel" class="rules-panel"><summary>Inspect the inferred rule</summary><p id="rule-context" class="muted"></p><pre id="rule-code"></pre></details></div></div>
+      </section>
+    </div>
+    <section class="provenance panel" aria-labelledby="provenance-title"><div><p class="eyebrow">Keep the evidence separate</p><h2 id="provenance-title">Learned does not mean unconstrained.</h2><p>The interface and argument types are declared by a person. Elementary arithmetic, sequence operations and UTF codecs are supplied grammar. The model's transformations, guards and distinguishable modes are inferred within that grammar.</p></div><div><details id="evidence-panel"><summary>Recorded native comparisons <span id="evidence-badge">No receipt</span></summary><p id="evidence-description" class="muted">No native oracle runs in this studio. Imported evidence is unsigned data.</p><pre id="evidence-content"></pre></details><p class="cli-note">Build your own model with the Python CLI.<br><code>eidryl --help</code> · learn → check → export</p></div></section>
+  </main>
+  <footer><span>Behavior, made portable.</span><span>Local interpreter · no model API · no native target</span></footer>
+</body>
+</html>

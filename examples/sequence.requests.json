@@ -1,0 +1,48 @@
+[
+  {
+    "model": "native-sequence",
+    "constructor": [
+      [
+        "one",
+        "two",
+        "three"
+      ],
+      4
+    ],
+    "actions": [
+      [
+        "rotate",
+        [
+          -10007
+        ]
+      ],
+      [
+        "append",
+        [
+          "four"
+        ]
+      ],
+      [
+        "extend",
+        [
+          [
+            "new",
+            "\ud83e\udded"
+          ]
+        ]
+      ],
+      [
+        "reverse",
+        []
+      ],
+      [
+        "pop",
+        []
+      ],
+      [
+        "popleft",
+        []
+      ]
+    ]
+  }
+]

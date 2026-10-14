@@ -1,0 +1,60 @@
+[
+  {
+    "model": "native-text",
+    "constructor": [
+      "\ud83d\ude42 a stream"
+    ],
+    "actions": [
+      [
+        "seek",
+        [
+          40
+        ]
+      ],
+      [
+        "write",
+        [
+          "new\u03b2"
+        ]
+      ],
+      [
+        "seek",
+        [
+          0
+        ]
+      ],
+      [
+        "read",
+        [
+          4
+        ]
+      ],
+      [
+        "write",
+        [
+          "edit\ud83c\udf0b"
+        ]
+      ],
+      [
+        "seek",
+        [
+          90
+        ]
+      ],
+      [
+        "read",
+        [
+          -9
+        ]
+      ],
+      [
+        "value",
+        []
+      ],
+      [
+        "position",
+        []
+      ]
+    ]
+  }
+]

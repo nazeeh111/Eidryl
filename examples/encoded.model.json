@@ -1,0 +1,869 @@
+{
+  "schema": "data-transducer/1",
+  "factory": "native-encoded",
+  "constructor_types": [],
+  "constructor_guard": [
+    "const",
+    true
+  ],
+  "fields": [
+    "buffer.getvalue()",
+    "buffer.tell()"
+  ],
+  "initial": [
+    [
+      "const",
+      {
+        "bytes": ""
+      }
+    ],
+    [
+      "const",
+      0
+    ]
+  ],
+  "initial_mode": 1,
+  "surface": {
+    "write": [
+      "str"
+    ],
+    "rawSeek": [
+      "int"
+    ],
+    "truncate": [
+      "int"
+    ],
+    "textSeek": [
+      "int"
+    ],
+    "bytes": [],
+    "position": []
+  },
+  "rules": {
+    "write": {
+      "0": {
+        "return": [
+          "len",
+          [
+            "a",
+            0
+          ]
+        ],
+        "state": [
+          [
+            "if",
+            [
+              "eq",
+              [
+                "const",
+                0
+              ],
+              [
+                "len",
+                [
+                  "a",
+                  0
+                ]
+              ]
+            ],
+            [
+              "s",
+              0
+            ],
+            [
+              "concat",
+              [
+                "concat",
+                [
+                  "slice",
+                  [
+                    "s",
+                    0
+                  ],
+                  [
+                    "const",
+                    0
+                  ],
+                  [
+                    "s",
+                    1
+                  ]
+                ],
+                [
+                  "pad",
+                  [
+                    "s",
+                    0
+                  ],
+                  [
+                    "sub",
+                    [
+                      "s",
+                      1
+                    ],
+                    [
+                      "len",
+                      [
+                        "s",
+                        0
+                      ]
+                    ]
+                  ]
+                ]
+              ],
+              [
+                "concat",
+                [
+                  "encode",
+                  [
+                    "a",
+                    0
+                  ],
+                  [
+                    "const",
+                    "utf-16-le"
+                  ]
+                ],
+                [
+                  "slice",
+                  [
+                    "s",
+                    0
+                  ],
+                  [
+                    "add",
+                    [
+                      "s",
+                      1
+                    ],
+                    [
+                      "len",
+                      [
+                        "encode",
+                        [
+                          "a",
+                          0
+                        ],
+                        [
+                          "const",
+                          "utf-16-le"
+                        ]
+                      ]
+                    ]
+                  ],
+                  [
+                    "len",
+                    [
+                      "s",
+                      0
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          [
+            "add",
+            [
+              "s",
+              1
+            ],
+            [
+              "len",
+              [
+                "encode",
+                [
+                  "a",
+                  0
+                ],
+                [
+                  "const",
+                  "utf-16-le"
+                ]
+              ]
+            ]
+          ]
+        ],
+        "guard": [
+          "const",
+          true
+        ],
+        "mode": [
+          "const",
+          0
+        ],
+        "examples": 114,
+        "invalid_examples": 0
+      },
+      "1": {
+        "return": [
+          "len",
+          [
+            "a",
+            0
+          ]
+        ],
+        "state": [
+          [
+            "concat",
+            [
+              "concat",
+              [
+                "slice",
+                [
+                  "s",
+                  0
+                ],
+                [
+                  "const",
+                  0
+                ],
+                [
+                  "s",
+                  1
+                ]
+              ],
+              [
+                "pad",
+                [
+                  "s",
+                  0
+                ],
+                [
+                  "sub",
+                  [
+                    "s",
+                    1
+                  ],
+                  [
+                    "len",
+                    [
+                      "s",
+                      0
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            [
+              "concat",
+              [
+                "concat",
+                [
+                  "const",
+                  {
+                    "bytes": "//4="
+                  }
+                ],
+                [
+                  "encode",
+                  [
+                    "a",
+                    0
+                  ],
+                  [
+                    "const",
+                    "utf-16-le"
+                  ]
+                ]
+              ],
+              [
+                "slice",
+                [
+                  "s",
+                  0
+                ],
+                [
+                  "add",
+                  [
+                    "s",
+                    1
+                  ],
+                  [
+                    "len",
+                    [
+                      "concat",
+                      [
+                        "encode",
+                        [
+                          "a",
+                          0
+                        ],
+                        [
+                          "const",
+                          "utf-16-le"
+                        ]
+                      ],
+                      [
+                        "const",
+                        {
+                          "bytes": "//4="
+                        }
+                      ]
+                    ]
+                  ]
+                ],
+                [
+                  "len",
+                  [
+                    "s",
+                    0
+                  ]
+                ]
+              ]
+            ]
+          ],
+          [
+            "add",
+            [
+              "s",
+              1
+            ],
+            [
+              "len",
+              [
+                "concat",
+                [
+                  "encode",
+                  [
+                    "a",
+                    0
+                  ],
+                  [
+                    "const",
+                    "utf-16-le"
+                  ]
+                ],
+                [
+                  "const",
+                  {
+                    "bytes": "//4="
+                  }
+                ]
+              ]
+            ]
+          ]
+        ],
+        "guard": [
+          "const",
+          true
+        ],
+        "mode": [
+          "const",
+          0
+        ],
+        "examples": 63,
+        "invalid_examples": 0
+      }
+    },
+    "rawSeek": {
+      "0": {
+        "return": [
+          "a",
+          0
+        ],
+        "state": [
+          [
+            "s",
+            0
+          ],
+          [
+            "a",
+            0
+          ]
+        ],
+        "guard": [
+          "if",
+          [
+            "lt",
+            [
+              "s",
+              1
+            ],
+            [
+              "sub",
+              [
+                "s",
+                1
+              ],
+              [
+                "a",
+                0
+              ]
+            ]
+          ],
+          [
+            "const",
+            false
+          ],
+          [
+            "const",
+            true
+          ]
+        ],
+        "mode": [
+          "const",
+          0
+        ],
+        "examples": 133,
+        "invalid_examples": 40
+      },
+      "1": {
+        "return": [
+          "a",
+          0
+        ],
+        "state": [
+          [
+            "s",
+            0
+          ],
+          [
+            "a",
+            0
+          ]
+        ],
+        "guard": [
+          "if",
+          [
+            "lt",
+            [
+              "s",
+              1
+            ],
+            [
+              "sub",
+              [
+                "s",
+                1
+              ],
+              [
+                "a",
+                0
+              ]
+            ]
+          ],
+          [
+            "const",
+            false
+          ],
+          [
+            "const",
+            true
+          ]
+        ],
+        "mode": [
+          "const",
+          1
+        ],
+        "examples": 81,
+        "invalid_examples": 27
+      }
+    },
+    "truncate": {
+      "0": {
+        "return": [
+          "a",
+          0
+        ],
+        "state": [
+          [
+            "slice",
+            [
+              "s",
+              0
+            ],
+            [
+              "const",
+              0
+            ],
+            [
+              "a",
+              0
+            ]
+          ],
+          [
+            "s",
+            1
+          ]
+        ],
+        "guard": [
+          "if",
+          [
+            "lt",
+            [
+              "s",
+              1
+            ],
+            [
+              "sub",
+              [
+                "s",
+                1
+              ],
+              [
+                "a",
+                0
+              ]
+            ]
+          ],
+          [
+            "const",
+            false
+          ],
+          [
+            "const",
+            true
+          ]
+        ],
+        "mode": [
+          "const",
+          0
+        ],
+        "examples": 136,
+        "invalid_examples": 39
+      },
+      "1": {
+        "return": [
+          "a",
+          0
+        ],
+        "state": [
+          [
+            "slice",
+            [
+              "s",
+              0
+            ],
+            [
+              "const",
+              0
+            ],
+            [
+              "a",
+              0
+            ]
+          ],
+          [
+            "s",
+            1
+          ]
+        ],
+        "guard": [
+          "if",
+          [
+            "lt",
+            [
+              "s",
+              1
+            ],
+            [
+              "sub",
+              [
+                "s",
+                1
+              ],
+              [
+                "a",
+                0
+              ]
+            ]
+          ],
+          [
+            "const",
+            false
+          ],
+          [
+            "const",
+            true
+          ]
+        ],
+        "mode": [
+          "const",
+          1
+        ],
+        "examples": 81,
+        "invalid_examples": 27
+      }
+    },
+    "textSeek": {
+      "0": {
+        "return": [
+          "a",
+          0
+        ],
+        "state": [
+          [
+            "s",
+            0
+          ],
+          [
+            "a",
+            0
+          ]
+        ],
+        "guard": [
+          "if",
+          [
+            "lt",
+            [
+              "s",
+              1
+            ],
+            [
+              "sub",
+              [
+                "s",
+                1
+              ],
+              [
+                "a",
+                0
+              ]
+            ]
+          ],
+          [
+            "const",
+            false
+          ],
+          [
+            "const",
+            true
+          ]
+        ],
+        "mode": [
+          "if",
+          [
+            "eq",
+            [
+              "s",
+              1
+            ],
+            [
+              "add",
+              [
+                "s",
+                1
+              ],
+              [
+                "a",
+                0
+              ]
+            ]
+          ],
+          [
+            "const",
+            1
+          ],
+          [
+            "const",
+            0
+          ]
+        ],
+        "examples": 137,
+        "invalid_examples": 43
+      },
+      "1": {
+        "return": [
+          "a",
+          0
+        ],
+        "state": [
+          [
+            "s",
+            0
+          ],
+          [
+            "a",
+            0
+          ]
+        ],
+        "guard": [
+          "if",
+          [
+            "lt",
+            [
+              "s",
+              1
+            ],
+            [
+              "sub",
+              [
+                "s",
+                1
+              ],
+              [
+                "a",
+                0
+              ]
+            ]
+          ],
+          [
+            "const",
+            false
+          ],
+          [
+            "const",
+            true
+          ]
+        ],
+        "mode": [
+          "if",
+          [
+            "eq",
+            [
+              "s",
+              1
+            ],
+            [
+              "add",
+              [
+                "s",
+                1
+              ],
+              [
+                "a",
+                0
+              ]
+            ]
+          ],
+          [
+            "const",
+            1
+          ],
+          [
+            "const",
+            0
+          ]
+        ],
+        "examples": 80,
+        "invalid_examples": 28
+      }
+    },
+    "bytes": {
+      "0": {
+        "return": [
+          "s",
+          0
+        ],
+        "state": [
+          [
+            "s",
+            0
+          ],
+          [
+            "s",
+            1
+          ]
+        ],
+        "guard": [
+          "const",
+          true
+        ],
+        "mode": [
+          "const",
+          0
+        ],
+        "examples": 76,
+        "invalid_examples": 0
+      },
+      "1": {
+        "return": [
+          "s",
+          0
+        ],
+        "state": [
+          [
+            "s",
+            0
+          ],
+          [
+            "s",
+            1
+          ]
+        ],
+        "guard": [
+          "const",
+          true
+        ],
+        "mode": [
+          "const",
+          1
+        ],
+        "examples": 33,
+        "invalid_examples": 0
+      }
+    },
+    "position": {
+      "0": {
+        "return": [
+          "s",
+          1
+        ],
+        "state": [
+          [
+            "s",
+            0
+          ],
+          [
+            "s",
+            1
+          ]
+        ],
+        "guard": [
+          "const",
+          true
+        ],
+        "mode": [
+          "const",
+          0
+        ],
+        "examples": 65,
+        "invalid_examples": 0
+      },
+      "1": {
+        "return": [
+          "s",
+          1
+        ],
+        "state": [
+          [
+            "s",
+            0
+          ],
+          [
+            "s",
+            1
+          ]
+        ],
+        "guard": [
+          "const",
+          true
+        ],
+        "mode": [
+          "const",
+          1
+        ],
+        "examples": 29,
+        "invalid_examples": 0
+      }
+    }
+  },
+  "latent_modes": 2,
+  "latent_evidence": {
+    "action": "write",
+    "argument": "Z",
+    "byte_field": 0,
+    "position_field": 1,
+    "basis": "utf-16-le",
+    "signatures": [
+      {
+        "bytes": ""
+      },
+      {
+        "bytes": "//4="
+      }
+    ]
+  },
+  "training_records": 1232
+}

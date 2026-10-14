@@ -1,0 +1,54 @@
+{
+  "schema": "eidryl-release-evidence/1",
+  "version": "0.1.0",
+  "engine_sha256": "f6b9122fdb1a619a578df96623156cd302bf3719899928a5e2fa6ffeb841f3b9",
+  "runtime_sha256": "74d76750c4a8c343ca1c9025de3ae53a4dc2023094d60335c1f377130a7b8b89",
+  "independent_native_review": {
+    "fresh_transitions": 502,
+    "regression_transitions": 48,
+    "mismatches": 0,
+    "additional_mutable_list_model_fresh_predictions": 4,
+    "final_findings_resolved": 4
+  },
+  "integration_review": {
+    "findings_resolved": 3,
+    "native_factory_learn_records": 110,
+    "native_factory_charged_operations": 942,
+    "fresh_native_check_transitions": 2
+  },
+  "public_recorded_native_examples": {
+    "transitions": 36,
+    "histories": 5,
+    "exception_message_parity": false
+  },
+  "local_checks": {
+    "failure_controls": 13,
+    "product_contracts": 6,
+    "portable_runtime_groups": 9,
+    "studio_controller_groups": 18
+  },
+  "learning_receipt": {
+    "text": {
+      "records": 670,
+      "charged_operations": 35612
+    },
+    "sequence": {
+      "records": 456,
+      "charged_operations": 8313
+    },
+    "encoded": {
+      "records": 1232,
+      "charged_operations": 138786,
+      "hidden_modes": 2
+    }
+  },
+  "limits": [
+    "Empirical finite histories and a supplied primitive grammar, not universal equivalence.",
+    "Manual factory, interface types, samples and elementary codecs are explicit priors.",
+    "Recorded data and manifests are unsigned; hashes are identity checks, not authentication.",
+    "No sandbox or rollback of external side effects; directly mutated arguments refuse.",
+    "Controller checks are not browser verification; actual browser results are recorded separately.",
+    "No actual offline file:// browser verification.",
+    "Hosted CI and anonymous release readback pending at this snapshot."
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "schema": "eidryl-check/1",
+  "passed": true,
+  "model_sha256": "5ab6c8a9ff78eb151bef382a5c9568a05c80771918b8ee0cebff442343899885",
+  "requested_histories": 1,
+  "completed_histories": 1,
+  "transitions": 9,
+  "mismatches": 0,
+  "charged_operations": 49,
+  "refusal": null,
+  "records": [
+    {
+      "request": {
+        "model": "native-text",
+        "constructor": [
+          "\ud83d\ude42 a stream"
+        ],
+        "actions": [
+          [
+            "seek",
+            [
+              40
+            ]
+          ],
+          [
+            "write",
+            [
+              "new\u03b2"
+            ]
+          ],
+          [
+            "seek",
+            [
+              0
+            ]
+          ],
+          [
+            "read",
+            [
+              4
+            ]
+          ],
+          [
+            "write",
+            [
+              "edit\ud83c\udf0b"
+            ]
+          ],
+          [
+            "seek",
+            [
+              90
+            ]
+          ],
+          [
+            "read",
+            [
+              -9
+            ]
+          ],
+          [
+            "value",
+            []
+          ],
+          [
+            "position",
+            []
+          ]
+        ]
+      },
+      "native": {
+        "schema": "eidryl-observation/1",
+        "fields": [
+          "getvalue()",
+          "tell()"
+        ],
+        "initial": [
+          "\ud83d\ude42 a stream",
+          0
+        ],
+        "trace": [
+          {
+            "action": "seek",
+            "args": [
+              40
+            ],
+            "accepted": true,
+            "value": 40,
+            "error": null,
+            "before": [
+              "\ud83d\ude42 a stream",
+              0
+            ],
+            "state": [
+              "\ud83d\ude42 a stream",
+              40
+            ]
+          },
+          {
+            "action": "write",
+            "args": [
+              "new\u03b2"
+            ],
+            "accepted": true,
+            "value": 4,
+            "error": null,
+            "before": [
+              "\ud83d\ude42 a stream",
+              40
+            ],
+            "state": [
+              "\ud83d\ude42 a stream\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              44
+            ]
+          },
+          {
+            "action": "seek",
+            "args": [
+              0
+            ],
+            "accepted": true,
+            "value": 0,
+            "error": null,
+            "before": [
+              "\ud83d\ude42 a stream\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              44
+            ],
+            "state": [
+              "\ud83d\ude42 a stream\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              0
+            ]
+          },
+          {
+            "action": "read",
+            "args": [
+              4
+            ],
+            "accepted": true,
+            "value": "\ud83d\ude42 a ",
+            "error": null,
+            "before": [
+              "\ud83d\ude42 a stream\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              0
+            ],
+            "state": [
+              "\ud83d\ude42 a stream\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              4
+            ]
+          },
+          {
+            "action": "write",
+            "args": [
+              "edit\ud83c\udf0b"
+            ],
+            "accepted": true,
+            "value": 5,
+            "error": null,
+            "before": [
+              "\ud83d\ude42 a stream\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              4
+            ],
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              9
+            ]
+          },
+          {
+            "action": "seek",
+            "args": [
+              90
+            ],
+            "accepted": true,
+            "value": 90,
+            "error": null,
+            "before": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              9
+            ],
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ]
+          },
+          {
+            "action": "read",
+            "args": [
+              -9
+            ],
+            "accepted": true,
+            "value": "",
+            "error": null,
+            "before": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ],
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ]
+          },
+          {
+            "action": "value",
+            "args": [],
+            "accepted": true,
+            "value": "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+            "error": null,
+            "before": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ],
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ]
+          },
+          {
+            "action": "position",
+            "args": [],
+            "accepted": true,
+            "value": 90,
+            "error": null,
+            "before": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ],
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ]
+          }
+        ],
+        "charged_operations": 49,
+        "operation_counts": {
+          "factory": 1,
+          "observation": 38,
+          "action": 9,
+          "cleanup": 1
+        }
+      },
+      "portable": {
+        "ok": true,
+        "initial": [
+          "\ud83d\ude42 a stream",
+          0
+        ],
+        "initial_mode": 0,
+        "trace": [
+          {
+            "accepted": true,
+            "value": 40,
+            "state": [
+              "\ud83d\ude42 a stream",
+              40
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 4,
+            "state": [
+              "\ud83d\ude42 a stream\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              44
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 0,
+            "state": [
+              "\ud83d\ude42 a stream\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              0
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": "\ud83d\ude42 a ",
+            "state": [
+              "\ud83d\ude42 a stream\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              4
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 5,
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              9
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 90,
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": "",
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ],
+            "before_mode": 0,
+            "mode": 0
+          },
+          {
+            "accepted": true,
+            "value": 90,
+            "state": [
+              "\ud83d\ude42 a edit\ud83c\udf0bm\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000new\u03b2",
+              90
+            ],
+            "before_mode": 0,
+            "mode": 0
+          }
+        ],
+        "final_mode": 0
+      },
+      "comparison": {
+        "transitions": 9,
+        "mismatches": []
+      }
+    }
+  ],
+  "scope": "Recorded native comparisons on these histories. No universal equivalence, exception-message parity or future oracle proof."
+}

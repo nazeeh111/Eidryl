@@ -1,0 +1,53 @@
+{
+  "schema": "eidryl-manifest/1",
+  "files": {
+    "LICENSE.txt": {
+      "sha256": "ab0ce13cd5b12cd01185876ef0c286fedd048342b6460f36bc4e9c7ee21d999a",
+      "bytes": 1074
+    },
+    "README.md": {
+      "sha256": "472adf41d1892a42e0855912905e321192dea2bc54f0d2fd0d1f543372542b80",
+      "bytes": 7075
+    },
+    "README.txt": {
+      "sha256": "8770ade69b5dd9570fffcc06b24ac7356c2f6b0ac3462d8ff57de08563ffa613",
+      "bytes": 409
+    },
+    "index.html": {
+      "sha256": "9eaf1ab5bf5155eeac14808d00abfda2e170e9401bdcbaedcbb1e45dd659ce25",
+      "bytes": 6001
+    },
+    "model.json": {
+      "sha256": "e1f9ebfcff89ccabebef468917cb3e9bfe1b2e327372729cf9f3758c64d05b65",
+      "bytes": 15179
+    },
+    "portable.zip": {
+      "sha256": "4a33720490dfda71c6a00eb0a45d57b7e44c66959c0bf305bc2af2edeca97fde",
+      "bytes": 24917
+    },
+    "recorded.json": {
+      "sha256": "c137e1e0a3d21edd676837ca57fa2bc1cda6332647d959e95b3992e431286bb0",
+      "bytes": 19912
+    },
+    "request.json": {
+      "sha256": "c79435c4bd7978c3f2fa3a12104f0d1051a782b1eff805528e3d0fffd171eecb",
+      "bytes": 643
+    },
+    "runner.mjs": {
+      "sha256": "23d74f875409faa6c3c3368fb530a50e1dd4e97efdfcc1beafb96026464db84b",
+      "bytes": 1572
+    },
+    "runtime.mjs": {
+      "sha256": "74d76750c4a8c343ca1c9025de3ae53a4dc2023094d60335c1f377130a7b8b89",
+      "bytes": 15635
+    },
+    "studio.css": {
+      "sha256": "dc0d96e154ac928befbbe8ad32258eb2ab5246779a6210d0672bc9d9307f3610",
+      "bytes": 10664
+    },
+    "studio.mjs": {
+      "sha256": "f0ea55dc87d99b96f056d080f8affe12fab702120a074ad4343aeaec8b9c4d1b",
+      "bytes": 19703
+    }
+  }
+}
