@@ -2,6 +2,10 @@
 
 **Learn portable executable models from a running stateful API.**
 
+[Try the live lab](https://nazeeh111.github.io/Eidryl/) · [Download the release](https://github.com/nazeeh111/Eidryl/releases/tag/v0.1.0) · [Validation](VALIDATION.json)
+
+![The real Eidryl studio inspecting an inferred hidden-state transition](docs/images/studio.png)
+
 A stream remembers a cursor. A bounded queue changes how it drops elements. A text encoder can remember something invisible in its public state. Eidryl experiments with an explicitly trusted constructor, learns data transformations and hidden modes, then runs the resulting model in JavaScript without the original component.
 
 The first release targets resettable local Python objects with typed text, integer and string-list inputs. It is a tool for creating inspectable test doubles and investigating behavior, with an elementary supplied grammar. It does not replicate arbitrary applications or devices.
