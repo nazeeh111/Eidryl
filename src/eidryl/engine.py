@@ -87,8 +87,6 @@ def evaluate(expr, row):
         return values[0] < values[1]
     if op == 'not':
         return not values[0]
-    if op == 'if':
-        return values[1] if values[0] else values[2]
     if op == 'at':
         return values[0][values[1]]
     if op == 'slice':
@@ -129,7 +127,6 @@ def cost(expr):
 def catalog(rows):
     """Enumerate bounded primitive programs, merging identical observed vectors."""
     outputs = {}
-    expressions = []
 
     def put(expr):
         values = vector(expr, rows)

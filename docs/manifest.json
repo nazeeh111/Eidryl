@@ -22,8 +22,8 @@
       "bytes": 15179
     },
     "portable.zip": {
-      "sha256": "845e8fb3ec04995de3d941cafdd7dd4e76bcce658b3291c6a6ca78c2a2a3edbd",
-      "bytes": 25084
+      "sha256": "0602f84378ad9e7a0a5daab4cf9fd31a4df4316ce87aaf580ec3e24f2bb638f8",
+      "bytes": 25100
     },
     "recorded.json": {
       "sha256": "c137e1e0a3d21edd676837ca57fa2bc1cda6332647d959e95b3992e431286bb0",
@@ -46,8 +46,8 @@
       "bytes": 10664
     },
     "studio.mjs": {
-      "sha256": "f0ea55dc87d99b96f056d080f8affe12fab702120a074ad4343aeaec8b9c4d1b",
-      "bytes": 19703
+      "sha256": "c655103910a84d323ef3239c2c32b01a3b2879059527aede07a400c6a2eac505",
+      "bytes": 19740
     }
   }
 }

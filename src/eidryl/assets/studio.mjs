@@ -168,7 +168,7 @@ export function createStudio(document, environment = globalThis) {
       button.setAttribute('aria-label', 'Step ' + index + ': ' + step.title + ', ' + step.meta);
       const label = node('span', 'step-label', step.title); label.append(node('span', 'step-meta', step.meta));
       button.append(node('span', 'step-number', index), label);
-      button.addEventListener('click', () => { state.selected = index; renderPrediction(); });
+      button.addEventListener('click', () => { state.selected = index; renderPrediction(); ui.timeline.children[index].focus(); });
       ui.timeline.append(button);
     });
   }

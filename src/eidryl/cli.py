@@ -33,7 +33,7 @@ def _parser():
     check.add_argument("--out", required=True, type=Path)
     export = commands.add_parser("export", help="Export an executable studio and fixed interpreter")
     export.add_argument("--model", required=True, type=Path)
-    export.add_argument("--request", type=Path, help="Optional starting history, otherwise first constructor samples")
+    export.add_argument("--request", type=Path, help="Optional starting history; defaults to empty text/list and integer 3")
     export.add_argument("--evidence", type=Path, help="Optional recorded native check receipt")
     export.add_argument("--out", required=True, type=Path)
     return parser
@@ -113,8 +113,8 @@ def export(args):
         request = product.read_json(args.request)
         product.requests(model, [request])
     else:
-        # A model does not serialize its constructor samples. Use explicit examples per type,
-        # and let the studio show constructor refusal if this sample is outside learned support.
+        # Models do not serialize constructor samples. These fixed defaults must pass
+        # the model guard below; otherwise export requires an explicit --request.
         sample = {"str": "", "int": 3, "list": []}
         label = next(iter(model["surface"]))
         request = {"model": model["factory"], "constructor": [sample[t] for t in model["constructor_types"]], "actions": [[label, [sample[t] for t in model["surface"][label]]]]}
