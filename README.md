@@ -14,10 +14,16 @@ The first release targets resettable local Python objects with typed text, integ
 
 Python 3.11+ runs the learner. Node 20+ validates and checks the portable runtime. There are no Python runtime package dependencies, accounts, billed model APIs or remote execution services.
 
+From a fresh source checkout, install the CLI and keep the included examples at hand:
+
 ```sh
-python -m pip install --no-deps ./dist/eidryl-0.1.0-py3-none-any.whl
+git clone https://github.com/nazeeh111/Eidryl.git
+cd Eidryl
+python -m pip install --no-deps .
 eidryl --help
 ```
+
+Alternatively, [download the v0.1.0 wheel](https://github.com/nazeeh111/Eidryl/releases/tag/v0.1.0) and install it from **where you saved it** with `python -m pip install --no-deps /path/to/eidryl-0.1.0-py3-none-any.whl`. The examples below still need the source checkout; `dist/` is a local build output and is not included in a clone.
 
 From the source directory, declare a public API and learn from its constructor:
 
