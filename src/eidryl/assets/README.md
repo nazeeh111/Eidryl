@@ -10,10 +10,16 @@ The first release targets resettable local Python objects with typed text, integ
 
 Python 3.11+ runs the learner. Node 20+ validates and checks the portable runtime. There are no Python runtime package dependencies, accounts, billed model APIs or remote execution services.
 
+This portable folder already contains the browser lab. Serve it with `python -m http.server 8000` and open http://localhost:8000. Learning a new model needs the Python CLI and source examples:
+
 ```sh
-python -m pip install --no-deps ./dist/eidryl-0.1.0-py3-none-any.whl
+git clone https://github.com/nazeeh111/Eidryl.git
+cd Eidryl
+python -m pip install --no-deps .
 eidryl --help
 ```
+
+Alternatively, download the wheel from the [v0.1.0 release](https://github.com/nazeeh111/Eidryl/releases/tag/v0.1.0) and install the file from where you saved it. The examples below still need the source checkout; this portable folder does not include a `dist/` wheel or the example factories.
 
 From the source directory, declare a public API and learn from its constructor:
 
@@ -85,4 +91,4 @@ PYTHONPATH=src python -m unittest discover -s tests -p 'test_*.py' -v
 node --test tests/runtime.test.mjs tests/studio.test.mjs
 ```
 
-Implementation is MIT licensed. Development and review used Codex assistance. Active automata learning and symbolic transducer synthesis are established areas; see [AALpy](https://github.com/DES-Lab/AALpy), [LearnLib](https://learnlib.de/), and [active learning of string transducers](https://arxiv.org/abs/2104.11758). Eidryl's contribution is this bounded experiment, inference, validation and portable inspection workflow.
+Implementation is MIT licensed. Active automata learning and symbolic transducer synthesis are established areas; see [AALpy](https://github.com/DES-Lab/AALpy), [LearnLib](https://learnlib.de/), and [active learning of string transducers](https://arxiv.org/abs/2104.11758). Eidryl's contribution is this bounded experiment, inference, validation and portable inspection workflow.

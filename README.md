@@ -95,4 +95,4 @@ PYTHONPATH=src python -m unittest discover -s tests -p 'test_*.py' -v
 node --test tests/runtime.test.mjs tests/studio.test.mjs
 ```
 
-Implementation is MIT licensed. Development and review used Codex assistance. Active automata learning and symbolic transducer synthesis are established areas; see [AALpy](https://github.com/DES-Lab/AALpy), [LearnLib](https://learnlib.de/), and [active learning of string transducers](https://arxiv.org/abs/2104.11758). Eidryl's contribution is this bounded experiment, inference, validation and portable inspection workflow.
+Implementation is MIT licensed. Active automata learning and symbolic transducer synthesis are established areas; see [AALpy](https://github.com/DES-Lab/AALpy), [LearnLib](https://learnlib.de/), and [active learning of string transducers](https://arxiv.org/abs/2104.11758). Eidryl's contribution is this bounded experiment, inference, validation and portable inspection workflow.
